@@ -16,6 +16,8 @@ public interface BankAccountRepository extends JpaRepository<BankAccount, UUID> 
 
     List<BankAccount> findByUserIdAndIsActive(UUID userId, Boolean isActive);
 
+    List<BankAccount> findByIsActive(Boolean isActive);
+
     Optional<BankAccount> findByPlaidAccountId(String plaidAccountId);
 
     boolean existsByPlaidAccountId(String plaidAccountId);
